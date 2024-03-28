@@ -45,7 +45,7 @@
                                             <x-dropdown-link :href="route('chirps.destroy', $chirp)" onclick="event.preventDefault(); this.closest('form').submit();">
                                                 {{ __('Delete') }}
                                             </x-dropdown-link>
-                                            </form>
+                                        </form>
                                     </x-slot>
                                 </x-dropdown>
                             @endif
