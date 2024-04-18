@@ -21,7 +21,7 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('chirps', ChirpController::class)
-       ->only(['index', 'store', 'edit', 'update']);
+       ->only(['index', 'store', 'edit', 'update', 'destroy']);
     Route::post(
        '/chirps/{chirp}/addToFavourites',
        [ChirpController::class, 'addToFavourites']
