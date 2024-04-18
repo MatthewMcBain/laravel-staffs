@@ -77,7 +77,10 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('chirps.index')" :active="request()->routeIs('chirps.index')">
-                 {{ __('Chirps') }}
+                {{ __('Chirps') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('chirps.favourites')" :active="request()->routeIs('chirps.favourites')">
+                {{ __('Favourites') }}
             </x-responsive-nav-link>
         </div>
 
@@ -101,9 +104,6 @@
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('chirps.favourites')" :active="request()->routeIs('chirps.favourites')">
-                        {{ __('Favourites') }}
                     </x-responsive-nav-link>
                 </form>
             </div>
