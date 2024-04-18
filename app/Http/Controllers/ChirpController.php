@@ -17,7 +17,7 @@ class ChirpController extends Controller
     {
         $favourites = session('favourites', collect([]));
         $favourites->push($chirp);
-        session(['favourites', $favourites]);
+        session(['favourites' => $favourites]);
         return redirect(route('chirps.index'));
     }
 
